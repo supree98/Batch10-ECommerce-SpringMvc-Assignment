@@ -1,5 +1,7 @@
 package com.te.amazonwebapp.bean;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -10,7 +12,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "items_info")
-public class Item {
+public class Item implements Serializable{
 
 	@Id
 	private int id;

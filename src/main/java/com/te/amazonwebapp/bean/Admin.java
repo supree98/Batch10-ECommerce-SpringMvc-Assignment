@@ -1,5 +1,7 @@
 package com.te.amazonwebapp.bean;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -9,7 +11,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "admin_info")
-public class Admin {
+public class Admin implements Serializable{
 
 	@Id
 	@Column(name = "admin_id")

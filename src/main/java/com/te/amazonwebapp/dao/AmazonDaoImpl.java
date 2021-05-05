@@ -7,9 +7,12 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
+
 import org.springframework.stereotype.Repository;
+
 import com.te.amazonwebapp.bean.Admin;
 import com.te.amazonwebapp.bean.Item;
+import com.te.amazonwebapp.customexception.AmazonException;
 
 @Repository
 public class AmazonDaoImpl implements AmazonDao{
@@ -62,7 +65,7 @@ public class AmazonDaoImpl implements AmazonDao{
 			return true;
 		} catch(Exception e) {
 			e.printStackTrace();
-			return false;
+			throw new AmazonException("Item you are looking for is not present");
 		}
 	}
 

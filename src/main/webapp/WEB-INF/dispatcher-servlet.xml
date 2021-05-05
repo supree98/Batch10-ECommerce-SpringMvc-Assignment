@@ -20,5 +20,10 @@
 		<property name="suffix" value=".jsp"></property>
 	
 	</bean>
+	
+	<mvc:interceptors>
+	<bean class = "com.te.amazonwebapp.interceptor.AmazonInterceptor"></bean>
+	</mvc:interceptors>
+	
 
 </beans>

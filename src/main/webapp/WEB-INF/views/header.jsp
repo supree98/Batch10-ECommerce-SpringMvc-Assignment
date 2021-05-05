@@ -2,7 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 
 <%
-	String expMsg = (String) request.getAttribute("expMsg");
+	String message = (String) request.getAttribute("message");
 %>
 
 <!DOCTYPE html>
@@ -39,10 +39,10 @@
 	</table>
 
 	<%
-		if (expMsg != null && !expMsg.isEmpty()) {
+		if (message != null && !message.isEmpty()) {
 	%>
-	<h1 style="color: blue;">
-		<%=expMsg%></h1>
+	<h1 style="color: cyan;">
+		<%=message%></h1>
 	<%
 		}
 	%>

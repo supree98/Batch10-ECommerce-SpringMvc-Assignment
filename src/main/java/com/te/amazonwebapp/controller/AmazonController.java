@@ -82,12 +82,9 @@ public class AmazonController {
 		
 		if(service.removeItem(id)) {
 			map.addAttribute("message", "Item removed successfully");
-			return "removeItem";
-		} else {
-			map.addAttribute("message", "Item is not present");
-			return "removeItem";
-		}
-
+		} 
+		return "removeItem";
+		
 	}
 	
 	@GetMapping("searchAll")

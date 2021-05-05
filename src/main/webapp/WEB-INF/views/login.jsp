@@ -20,7 +20,7 @@
 
 
 	<fieldset>
-		<legend>Employee Login</legend>
+		<legend>Admin Login</legend>
 		<form action="./login" method="post">
 			<table>
 				<tr>
